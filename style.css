@@ -562,7 +562,7 @@
 .mobile {
     display: none;
 }
-@media only screen and (max-width:360px) {
+@media only screen and (max-width:500px) {
     .desctop {
         display: none;
     }
@@ -572,7 +572,7 @@
         display: block;
     }
     .header {
-        padding: 16px 20px;
+        padding: 4.444vw 5.556vw;
     }
     .header__logo-inner {
         margin: 0;
@@ -590,23 +590,23 @@
         flex-direction: column-reverse;
     }
     .block-title__left-block {
-        padding: 0 16px 36px 16px;
+        padding: 0 4.444vw 10vw 4.444vw;
     }
     .block-title__btn-inner {
         margin: 0;
     }
     .block-title__title {
-        width: 240px;
-        font-size: 40px;
+        width: 66.667vw;
+        font-size: 11.111vw;
         font-weight: 600;
-        line-height: 52px;
+        line-height: 14.444vw;
     }
     .block-title__btn-more {
-        width: 328px;
+        width: 91.111vw;
     }
     .block-title__image {
-        width: 360px;
-        border-radius: 40px;
+        width: 100vw;
+        border-radius: 11.111vw;
     }
     .block-title-bottom__left-block {
         padding: 0;
@@ -615,7 +615,7 @@
         justify-content: center;
     }
     .block-title-bottom {
-        padding: 16px;
+        padding: 4.444vw;
         flex-direction: column;
     }
     .block-title-bottom__description.mobile {
@@ -626,36 +626,36 @@
     }
     .block-title-bottom__title {
         width: auto;
-        font-size: 32px;
+        font-size: 8.889vw;
     }
     .block-title-bottom__right-block {
         overflow: hidden;
         width: 109.7%;
-        margin: 0 0 16px -16px;
+        margin: 0 0 4.444vw -4.444vw;
     }
     .block-title-bottom__right-block img {
-        width: 420px;
-        margin: 0 0 0 -23px;
+        width: 116.667vw;
+        margin: 0 0 0 -6.389vw;
     }
     .block-title__ellipse-inner.mobile {
         display: flex;
     }
     .slogan {
-        padding: 0 16px 120px 16px;
+        padding: 0 4.444vw 33.333vw 4.444vw;
     }
     .slogan__text {
         width: auto;
-        margin: 120px 0 24px 0;
-        font-size: 24px;
-        line-height: 32px;
+        margin: 33.333vw 0 6.667vw 0;
+        font-size: 6.667vw;
+        line-height: 8.889vw;
     }
     .block-services {
-        margin: 12px 0 0 0;
+        margin: 3.333vw 0 0 0;
         overflow: scroll;
     }
     .block-services__image {
-        height: 260px;
-        width: 240px;
+        height: 72.222vw;
+        width: 66.667vw;
     }
     .block-services__image-block:hover .block-services__link {
         display: none;
@@ -664,44 +664,44 @@
         height: auto;
     }
     .block-services__inner {
-        height: 480px;
+        height: 133.333vw;
     }
     .block-business {
-        padding: 80px 0 0 16px;
+        padding: 22.222vw 0 0 4.444vw;
     }
     .title {
         margin: 0;
-        font-size: 24px;
+        font-size: 6.667vw;
         text-align: start;
     }
     .block-training {
-        padding: 75px 0 0 16px;
+        padding: 20.833vw 0 0 4.444vw;
     }
     .block-training__inner {
         overflow: scroll;
     }
     .block-training__button {
-        width: 192px;
-        height: 43px;
+        width: 53.333vw;
+        height: 11.944vw;
         position: relative;
         bottom: 0;
     }
     .block-training__more {
-        padding: 24px;
+        padding: 6.667vw;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
     .block-news {
-        padding: 16px;
+        padding: 4.444vw;
     }
     .block-news__inner {
         overflow: scroll;
     }
     .footer {
         height: auto;
-        padding: 20px 16px 90px 16px;
+        padding: 5.556vw 4.444vw 25vw 4.444vw;
         flex-direction: column;
     }
     .footer__block-image {
@@ -714,14 +714,14 @@
     }
     .footer__block-social {
         width: max-content;
-        margin: 28px 0 0 0;
+        margin: 7.778vw 0 0 0;
     }
     .footer__link-inner {
         flex-wrap: wrap;
     }
     .footer__list {
-        margin: 0 0 10px 0;
-        width: 158px;
+        margin: 0 0 2.778vw 0;
+        width: 43.889vw;
     }
     .burger-checkbox {
         position: absolute;
@@ -733,9 +733,9 @@
         position: relative;
         border: none;
         background: transparent;
-        width: 40px;
-        height: 26px;
-        margin: 0px 0 0 35px;
+        width: 11.111vw;
+        height: 7.222vw;
+        margin: 0vw 0 0 9.722vw;
       }
       .burger::before,
       .burger::after {
@@ -744,13 +744,13 @@
         position: absolute;
         display: block;
         width: 100%;
-        height: 4px;
-        border-radius: 10px;
+        height: 1.111vw;
+        border-radius: 2.778vw;
         background: #000;
       }
       .burger::before {
         top: 0;
-        box-shadow: 0 11px 0 #000;
+        box-shadow: 0 3.056vw 0 #000;
         transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
       }
       .burger::after {
@@ -760,11 +760,11 @@
       .burger-checkbox:checked + .burger::before {
         top: 11px;
         transform: rotate(45deg);
-        box-shadow: 0 6px 0 rgba(0,0,0,0);
+        box-shadow: 0 1.667vw 0 rgba(0,0,0,0);
         transition: box-shadow .15s, top .3s, transform .3s .15s;
       }
       .burger-checkbox:checked + .burger::after {
-        bottom: 11px;
+        bottom: 3.056vw;
         transform: rotate(-45deg);
         transition: bottom .3s, transform .3s .15s;
       }
