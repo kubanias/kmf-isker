@@ -13,9 +13,6 @@
     border: 0;
     outline: 0;
 }
-.mobile {
-    display: none;
-}
 .header {
     height: 100px;
     width: 100%;
@@ -38,8 +35,6 @@
     background: rgb(247, 238, 232);
     font-family: Gilroy;
     font-size: 14px;
-    
-
 }
 .nav {
     display: flex;
@@ -51,7 +46,6 @@
 .nav__link {
     margin: 0 20px 0 0;
     list-style-type: none;
-
 }
 .nav__link a {
     text-decoration: none;
@@ -74,6 +68,9 @@
     font-size: 12px;
     font-weight: 400;
 }
+.nav__link__dropdown__link:nth-child(1) img {
+    display: none;
+}
 .nav__link__dropdown {
     margin: 0 0 0 -10px;
     padding: 24px 32px 8px;
@@ -86,7 +83,6 @@
 }
 .nav__link:hover  .nav__link__dropdown {
     display: block;
-    /* transition-delay: 1s; */
 }
 .nav__link a:hover {color: rgb(157, 9, 124);}
 .header__nav-inner__button {
@@ -108,7 +104,6 @@
     padding: 105px 0 0 0;
     background: #ffffff;
     display: none;
-    
 }
 .burger-menu.mobile.open {
     display: block;
@@ -129,13 +124,9 @@
     line-height: 24px;
     list-style:  none;
     margin: 0 0 40px 0;
-
 }
 .burger-menu__dropdown {
     display: none;
-}
-.dropdown__list {
-
 }
 .dropdown__link {
     list-style: none;
@@ -145,29 +136,12 @@
 .dropdown__link:nth-child(1) {
     margin: 20px 0 20px 0;
 }
-.burger-menu__link:hover .burger-menu__dropdown {
-    display: block;
-}
 .burger-menu__image {
     margin: 40px 0 0 0;
 }
 .visible {
     display: block;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .block-title {
     display: flex;
     border-radius: 40px;
@@ -249,11 +223,9 @@
     font-weight: bold;
     line-height: 48px;
     text-align: center;
-
-
 }
 .block-title-bottom {
-
+    padding-bottom: 100px;
 }
 .block-title-bottom__left-block {
     padding-top: 87px;
@@ -453,7 +425,6 @@
     position: absolute;
     bottom: 32px;
 }
-
 .block-news {
     margin: 220px 0 0 0;
     padding: 0 398px 0 377px;
@@ -468,7 +439,6 @@
     gap: 24px;
 }
 .block-news__block {
-    
     position: relative;
 }
 .block-news__block img {
@@ -476,19 +446,14 @@
     height: 286px;
     border-radius: 24px;
     object-fit: cover;
-
 }
 .block-news__image {
     background: white;
     position: relative;
     display: inline-block;
     overflow: hidden;
-
-
 }
-.block-news__image img {
 
-}
 .block-news__image::before {
     content: '';
     position: absolute;
@@ -562,6 +527,9 @@
 .mobile {
     display: none;
 }
+.rotate180 {
+    transform: rotate(180deg);
+  }
 @media only screen and (max-width:500px) {
     .desctop {
         display: none;
@@ -574,11 +542,13 @@
     .header {
         padding: 4.444vw 5.556vw;
     }
+    .title {
+        margin: 0;
+        font-size: 6.667vw;
+        text-align: start;
+    }
     .header__logo-inner {
         margin: 0;
-    }
-    .header__nav-inner {
-        
     }
     .burger-checkbox {
         display: block;
@@ -620,9 +590,6 @@
     }
     .block-title-bottom__description.mobile {
         width: auto;
-    }
-    .block-title-bottom__btn {
-        
     }
     .block-title-bottom__title {
         width: auto;
@@ -669,16 +636,12 @@
     .block-business {
         padding: 22.222vw 0 0 4.444vw;
     }
-    .title {
-        margin: 0;
-        font-size: 6.667vw;
-        text-align: start;
-    }
     .block-training {
         padding: 20.833vw 0 0 4.444vw;
     }
     .block-training__inner {
         overflow: scroll;
+        padding: 16px;
     }
     .block-training__button {
         width: 53.333vw;
@@ -692,7 +655,6 @@
         flex-direction: column;
         justify-content: space-between;
     }
-
     .block-news {
         padding: 4.444vw;
     }
@@ -723,49 +685,46 @@
         margin: 0 0 2.778vw 0;
         width: 43.889vw;
     }
-    .burger-checkbox {
-        position: absolute;
-        visibility: hidden;
-      }
-      .burger {
-        cursor: pointer;
-        display: block;
+    .burger {
+        width: 40px;
+        height: 14px;
         position: relative;
-        border: none;
-        background: transparent;
-        width: 11.111vw;
-        height: 7.222vw;
-        margin: 0vw 0 0 9.722vw;
-      }
-      .burger::before,
-      .burger::after {
-        content: '';
-        left: 0;
-        position: absolute;
+        margin: 0 0 0 70px;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+    }
+    .burger span {
         display: block;
+        position: absolute;
+        height: 5px;
         width: 100%;
-        height: 1.111vw;
-        border-radius: 2.778vw;
-        background: #000;
-      }
-      .burger::before {
-        top: 0;
-        box-shadow: 0 3.056vw 0 #000;
-        transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
-      }
-      .burger::after {
-        bottom: 0;
-        transition: bottom .3s .15s, transform .3s;
-      }
-      .burger-checkbox:checked + .burger::before {
-        top: 11px;
-        transform: rotate(45deg);
-        box-shadow: 0 1.667vw 0 rgba(0,0,0,0);
-        transition: box-shadow .15s, top .3s, transform .3s .15s;
-      }
-      .burger-checkbox:checked + .burger::after {
-        bottom: 3.056vw;
-        transform: rotate(-45deg);
-        transition: bottom .3s, transform .3s .15s;
-      }
+        background: #000000;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+    }
+    .burger span:nth-child(1) {
+        top: 0px;
+    }
+    .burger span:nth-child(2) {
+        top: 12px;
+    }
+    .burger span:nth-child(3) {
+        top: 25px;
+    }
+    .burger.open span:nth-child(1) {
+        top: 18px;
+        transform: rotate(135deg);
+    }
+    .burger.open span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+    }
+    .burger.open span:nth-child(3) {
+        top: 18px;
+        transform: rotate(-135deg);
+    }
 }
